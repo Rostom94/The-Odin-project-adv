@@ -15,7 +15,6 @@ html,
 
 body {
   height: 100vh;
-  background-color: azure;
 }
 
 /* img style and logo */
@@ -69,23 +68,77 @@ body {
 /* form container style */
 
 .form-description-container {
-  border: 2px solid red;
   height: 100%;
   width: 100%;
 }
 
 .description-container {
-  border: 2px solid green;
   margin-top: 100px;
+  line-height: 32px;
+  word-spacing: 2px;
+  text-transform: uppercase;
+  margin: 100px 25px 0 25px;
+  & > em {
+    font-weight: bold;
+  }
 }
+
+/* form style */
 
 .form-container {
   height: 350px;
-  width: 100%;
-  border: 5px solid yellow;
-  margin-top: 100px;
+  margin: 100px 25px 0 25px;
 }
+
+form {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  justify-content: center;
+}
+
+.form1,
+.form2 {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  gap: 10px;
+}
+
+.input-form {
+  width: 300px;
+  height: 40px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+/* button style */
 
 .call-to-action {
   margin-top: 100px;
+  height: 100px;
+}
+
+button {
+  width: 200px;
+  height: 55px;
+  border-radius: 5px;
+  border: none;
+  background-color: #596d48;
+  margin-left: 100px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.sign-up {
+  font-weight: bold;
+  margin: 30px 0 0 80px;
+  & > a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #596d48;
+  }
 }
