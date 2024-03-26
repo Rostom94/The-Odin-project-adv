@@ -10,7 +10,9 @@ body {
   height: 100vh;
 }
 
-h3 {
+h3,
+h1,
+h2 {
   text-wrap: nowrap;
 }
 
@@ -26,9 +28,8 @@ h3 {
 .nav-bar {
   grid-area: 1/1/5/2;
   background-color: #1992d4;
-  position: fixed;
   height: 100%;
-  width: 12vw;
+  padding: 15px;
 }
 
 .nav-bar-logo {
@@ -38,6 +39,7 @@ h3 {
   align-items: center;
   color: white;
   margin-top: 50px;
+
   & img {
     height: 100%;
     background-color: white;
@@ -50,7 +52,7 @@ h3 {
   flex-direction: column;
   color: white;
   gap: 15px;
-  font-size: 18px;
+  font-size: 2vw;
   margin-top: 50px;
   margin-left: 50px;
   & > * {
@@ -72,7 +74,7 @@ h3 {
   height: 60px;
   display: flex;
   align-items: center;
-  margin-left: 25px;
+  margin-left: 100px;
   gap: 15px;
 
   & > input {
@@ -91,6 +93,7 @@ h3 {
   justify-content: center;
   align-items: center;
   margin-right: 10%;
+
   & > .img-profile {
     height: 45px;
     width: 45px;
@@ -99,7 +102,7 @@ h3 {
     background-color: #1992d4;
 
     & #profile {
-      height: 100px;
+      height: 75px;
     }
   }
 }
@@ -108,7 +111,6 @@ h3 {
 
 .user {
   grid-area: 2 / 2 / 3 / 4;
-  /* background-color: green; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -138,8 +140,8 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 25%;
+  height: 100px;
+  width: 500px;
   gap: 15px;
 }
 
@@ -162,12 +164,16 @@ h3 {
 
 .content {
   grid-area: 3 / 2 / 5 / 3;
+  & h1 {
+    margin-left: 50px;
+    font-size: 2vw;
+  }
 }
 
 .content-grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  grid-auto-rows: 300px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
   gap: 15px;
   padding: 15px;
 }
@@ -193,12 +199,13 @@ h3 {
 }
 
 .card-title {
-  font-size: 25px;
+  font-size: 1vw;
   font-weight: bold;
 }
 
 .card-description {
   color: rgb(95, 95, 95);
+  font-size: 1vw;
 }
 
 .card-emot {
@@ -210,9 +217,37 @@ h3 {
 
 .annoucements {
   grid-area: 3 / -2 / 4 / -1;
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 90%;
+  width: 80%;
+  margin: auto 50px;
 }
 
+.annonce {
+  border-bottom: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 10px;
+  & h1 {
+    font-size: 2vw;
+  }
+  & p {
+    font-size: 1vw;
+  }
+}
+
+/* trending */
 .trending {
   grid-area: 4 / -2 / 5 / -1;
   background-color: lime;
