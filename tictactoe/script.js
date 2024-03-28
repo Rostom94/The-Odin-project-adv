@@ -8,8 +8,11 @@ const plateform = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 function PlayerTurn(board) {
   // 2 joueurs, un npc et un humain, l'humain dois choisir un chiffre
   // inclus entre 1 et 9, cela sera son choix d'emplacement sur la plateforme
-  const player_choice = Number(prompt("veuillez choisir un numéro de 1 a 9"));
-  console.log(board.indexOf(player_choice) >= 0);
+  const player_choice = Number(
+    prompt(
+      `veuillez choisir un numéro de ${board[0]} a ${board[board.length - 1]}`
+    )
+  );
   if (board.indexOf(player_choice) >= 0) {
     // cherchez la valeur du premier joueur, pour le moment c'est l'humain
     // et l'enlever de la liste
@@ -79,6 +82,9 @@ const winning_list = {
   7: [2, 5, 8],
   9: [3, 6, 9],
 };
+/* ============================================== */
+
+let result;
 
 // faire une boucle for in afin de comparer chaque element de l'objet
 // avec la liste winning
@@ -86,12 +92,17 @@ for (const id in winning_list) {
   let winning_array = winning_list[id];
   let WL_to_str = winning_array.toString();
   let PL_to_str = sorted_PlayerWinList.toString();
+  let NPC_to_str = npc_win_list.toString();
 
   // si ya correspondance sortir de la boucle et mettre reussite
   if (WL_to_str === PL_to_str) {
-    console.log("you win");
+    result = console.log("you win");
+    break;
+  } else if (NPC_to_str === WL_to_str) {
+    result = console.log("npc win");
     break;
   } else {
-    console.log("you lose!");
+    result = console.log("it's a draw");
+    break;
   }
 }

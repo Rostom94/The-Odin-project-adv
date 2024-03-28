@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+:root,
+html,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Permanent Marker";
+}
+
+body {
+  background-color: hsl(9, 100%, 65%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  z-index: 2;
+  border: 5px dashed #aa1a28;
+  height: 60vh;
+  width: 60vh;
+  border-radius: 20px;
+  position: relative;
+  &::before {
+    content: "Tic Tac Toe!";
+    position: absolute;
+    border-radius: 12px;
+    top: -30px;
+    left: 30px;
+    font-size: 1.8rem;
+    color: #aa1a28;
+    font-weight: bolder;
+    background-color: hsl(9, 100%, 65%);
+  }
+}
+
+.box {
+  height: 19.7vh;
+  width: 19.7vh;
+  &._1 {
+    border-bottom: 2px dashed #aa1a28;
+    border-right: 2px dashed #aa1a28;
+  }
+  &._2 {
+    border-bottom: 2px dashed #aa1a28;
+    border-right: 2px dashed #aa1a28;
+  }
+  &._3 {
+    border-bottom: 2px dashed #aa1a28;
+  }
+  &._4 {
+    border-bottom: 2px dashed #aa1a28;
+    border-right: 2px dashed #aa1a28;
+  }
+  &._5 {
+    border-bottom: 2px dashed #aa1a28;
+    border-right: 2px dashed #aa1a28;
+  }
+  &._6 {
+    border-bottom: 2px dashed #aa1a28;
+  }
+  &._7 {
+    border-right: 2px dashed #aa1a28;
+  }
+  &._8 {
+    border-right: 2px dashed #aa1a28;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #aa1a2880;
+  }
+}
+
+footer > p {
+  font-family: sans-serif;
+  font-weight: bold;
+}
