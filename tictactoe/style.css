@@ -46,6 +46,11 @@ body {
 .box {
   height: 19.7vh;
   width: 19.7vh;
+  font-size: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
   &._1 {
     border-bottom: 2px dashed #aa1a28;
     border-right: 2px dashed #aa1a28;
@@ -83,4 +88,16 @@ body {
 footer > p {
   font-family: sans-serif;
   font-weight: bold;
+}
+
+.reset {
+  padding: 20px 75px;
+  border-radius: 25px;
+  border: none;
+  background-color: #aa1a28;
+  color: white;
+  font-size: 1.5rem;
+  &:hover {
+    cursor: pointer;
+  }
 }
